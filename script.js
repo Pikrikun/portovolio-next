@@ -1,5 +1,5 @@
 function scrollToElement(elementSelector, instance = 0) {
-    const elements = document.querySelectorAll(elementSelector);
+    const elements = document.querySelector(elementSelector);
     if (elements.length > instance) {
         elements[instance].scrollIntoView({ behavior: 'smooth' });
     }
@@ -10,13 +10,13 @@ const link2 = document.getElementById("link2");
 const link3 = document.getElementById("link3");
 
 link1.addEventListener("click", () => {
-    scrollToElement('.header');
+    scrollToElement('#header');
 });
 
 link2.addEventListener("click", () => {
-    scrollToElement('.header');
+    scrollToElement('#header');
 });
 
 link3.addEventListener("click", () => {
-    scrollToElement('.column');
+    scrollToElement('#column');
 });
